@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #343a40; /* Dark background */
+            color: #f8f9fa; /* Light text */
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+        }
+        .form-control {
+            background-color: #495057;
+            color: #f8f9fa;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-selected {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Abstimmung</h2>
+        <form id="pollForm" action="/submit" method="post">
+            <h3>{{ poll_data.question }}</h3>
+
+            <div class="row">
+                {% for key, value in poll_data.answers.items() %}
+                    <div class="col-md-6 mb-3">
+                        <input type="radio" id="answer{{ key }}" name="selected_answer" value="{{ key }}" class="btn-check hidden">
+                        <label class="btn btn-secondary btn-block answer-btn" for="answer{{ key }}">{{ value }}</label>
+                    </div>
+                    {% if loop.index is divisibleby 2 and not loop.last %}
+                        </div><div class="row">
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <input type="hidden" id="selectedAnswer" name="selected_answer">
+            <input type="hidden" id="pollId" name="poll_id", value="{{ poll_data.id }}">
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.querySelectorAll('.answer-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.answer-btn').forEach(btn => btn.classList.remove('btn-selected'));
+                this.classList.add('btn-selected');
+                document.getElementById('selectedAnswer').value = this.previousElementSibling.value;
+            });
+        });
+    
+        document.getElementById('pollForm').addEventListener('submit', function(event) {
+            var selected = document.getElementById('selectedAnswer').value;
+            if (!selected) {
+                alert('Please select an answer.');
+                event.preventDefault();
+            } else {
+                document.querySelectorAll('.answer-btn').forEach(btn => btn.classList.remove('btn-selected'));
+                this.reset();
+            }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

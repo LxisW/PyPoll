@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Created poll</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div>
+    <h1>Successfully created poll!</h1>
+    <p>Question: {{question}}</p>
+    <p>Admin key: {{admin_key}}</p>
+    <button onclick="location.href='/poll/{{poll_id}}';">Go to poll</button>
+    <button id="copyPollLinkBtn" data-poll-link="{{poll_link}}">Copy poll link</button>
+    <button onclick="location.href='/results/{{poll_id}}';">Show results</button>
+</div>  
+<script>
+    document.getElementById('copyPollLinkBtn').addEventListener('click', function() {
+        const pollLink = this.getAttribute('data-poll-link');
+
+        navigator.clipboard.writeText(pollLink).then(function() {
+            console.log('Poll link copied to clipboard');
+            alert('Poll link copied to clipboard!');
+        }, function(err) {
+            console.error('Could not copy poll link: ', err);
+            alert('Failed to copy the poll link. Please try again.');
+        });
+    });
+</script>
+</body>
+</html>

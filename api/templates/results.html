@@ -1,0 +1,63 @@
+<html > 
+<head > 
+		<h1 > Results </h1 > 
+            <style>
+                .parent {
+                    display: grid;
+                    place-items: center; 
+                    padding-left: 100px;
+                }
+                .child {
+                    
+                    text-align: center;
+                }
+				html{
+					height:100vh;
+				}
+            </style>
+	</head > 
+	<body > 
+
+        <div class="parent">
+            <div class="child">
+                <div id = "3dchart"></div> 
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type = "text/javascript"> 
+
+			google.charts.load('current', {'packages': ['corechart']}) 
+
+			google.charts.setOnLoadCallback(drawCharts) 
+
+			function drawCharts() { 
+				var totalVotes = {{ total_votes }};
+
+				if (totalVotes === 0) {
+					document.getElementById('3dchart').innerHTML = '<h2>No votes yet. Check back later.</h2>';
+					return; 
+				}
+				var data = new google.visualization.DataTable() 
+				data.addColumn('string', 'answers') 
+				data.addColumn('number', 'votes'); 
+				data.addRows([ 
+					['{{a1}}', {{v1}}], 
+					['{{a2}}', {{v2}}], 
+					['{{a3}}', {{v3}}],
+					['{{a4}}', {{v4}}], 
+
+				]); 
+				var options = { 
+					'title': '{{title}}', 
+								'width': '{{wt}}', 
+								'height': '{{ht}}', 
+								'is3D': true, 
+				} 
+
+				var _3dchart = new google.visualization.PieChart(document.getElementById('3dchart')); 
+				_3dchart.draw(data, options); 
+			} 
+		</script > 
+	</body > 
+</html > 
