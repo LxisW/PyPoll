@@ -59,10 +59,9 @@
                     {% endif %}
                 {% endfor %}
             </div>
-
+            
             <input type="hidden" id="selectedAnswer" name="selected_answer">
             <input type="hidden" id="pollId" name="poll_id" value="{{ poll_data.id }}">
-
             <button type="submit" class="btn btn-primary btn-block">Submit</button>
         </form>
     </div>
@@ -74,11 +73,9 @@
                     btn.classList.remove('btn-selected');
                     btn.classList.add('btn-outline-primary');
                 });
-        
                 // Apply the 'btn-selected' style to the clicked button
                 this.classList.add('btn-selected');
                 this.classList.remove('btn-outline-primary');
-        
                 // Update the value of the hidden input to reflect the selected answer
                 document.getElementById('selectedAnswer').value = this.getAttribute('for').replace('answer', '');
             });

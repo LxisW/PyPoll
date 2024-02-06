@@ -21,7 +21,7 @@ def poll_page(poll_id):
             if not has_voted:
                 return render_template("poll.html", poll_data=poll_data)
             else:
-                # return "you have already voted"
+                # already voted"
                 return render_template(
                     "already_voted.html",
                     question=poll_data["question"],
@@ -156,34 +156,22 @@ def result_endpoint(poll_id):
         return redirect(url_for("main_page"))
 
 
-@app.route("/admin", methods=["GET"])
-def admin_endpoint():
-    return "Hello"
-
-
+# test endpoint to try rendering chart
 @app.route("/test", methods=["GET", "POST"])
 def get_data__show_chart():
-    title = "Test Title"
-    height = 600
-    width = 400
+    data = {
+        "a1": "Answer 1",
+        "v1": 1,
+        "a2": "Answer 2",
+        "v2": 3,
+        "a3": "Answer 3",
+        "v3": 2,
+        "a4": "Answer 4",
+        "v4": 0,
+        "title": "Is this the test queston?",
+        "total_votes": 6,
+        "wt": 700,
+        "ht": 700,
+    }
 
-    activity_1 = "Activity 1"
-    time1 = 111
-
-    activity_2 = "Activity 2"
-    time2 = 222
-    activity_3 = "Activity 2"
-    time3 = 333
-
-    return render_template(
-        "results.html",
-        act1=activity_1,
-        act2=activity_2,
-        act3=activity_3,
-        t1=time1,
-        t2=time2,
-        t3=time3,
-        ht=height,
-        wt=width,
-        title=title,
-    )
+    return render_template("results.html", **data)
