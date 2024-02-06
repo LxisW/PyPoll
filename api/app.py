@@ -21,12 +21,9 @@ def poll_page(poll_id):
             if not has_voted:
                 return render_template("poll.html", poll_data=poll_data)
             else:
-                # already voted"
-                return render_template(
-                    "already_voted.html",
-                    question=poll_data["question"],
-                    poll_id=poll_id,
-                )
+                # if already voted --> redirect to result endpoint"
+                return redirect(url_for("result_endpoint", poll_id=poll_id))
+
         else:
             # mulitple votes per IP allowed
             return render_template("poll.html", poll_data=poll_data)
