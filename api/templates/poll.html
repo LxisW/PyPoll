@@ -5,49 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poll App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f4f4f4; 
-            color: #343a40; 
-            padding-top: 50px;
-        }
-        .container {
-            max-width: 600px;
-            background-color: #fff; 
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-        }
-        .btn-primary, .btn-secondary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-        .btn-secondary:hover, .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
-        .btn-selected {
-            background-color: #0069d9; 
-            color: white;
-        }
-        .btn-block {
-            margin-bottom: 10px;
-        }
-        .form-control {
-            background-color: #e9ecef;
-            color: #495057;
-        }
-        h2{
-            color: #007BFF;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
 </head>
 <body>
     <div class="container">
         <h2 class="text-center">Vote</h2>
         <form id="pollForm" action="/submit" method="post">
             <h3>{{ poll_data.question }}</h3>
-
             <div class="row">
                 {% for key, value in poll_data.answers.items() %}
                     <div class="col-md-6 mb-3">
@@ -59,7 +24,6 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            
             <input type="hidden" id="selectedAnswer" name="selected_answer">
             <input type="hidden" id="pollId" name="poll_id" value="{{ poll_data.id }}">
             <button type="submit" class="btn btn-primary btn-block">Submit</button>

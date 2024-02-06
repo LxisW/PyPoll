@@ -5,55 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Results</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4; 
-            color: #343a40; 
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            text-align: center;
-            padding: 20px;
-            background-color: #fff; 
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-        }
-        h1 {
-            color: #007BFF;
-        }
-        #3dchart {
-            width: 100%;
-            min-height: 400px;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
-    </style>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head> 
 <body> 
-
     <div class="container">
         <h1>Results</h1>
         <div id="3dchart"></div> 
     </div>
-
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript"> 
         google.charts.load('current', {'packages': ['corechart']}); 
         google.charts.setOnLoadCallback(drawCharts); 
-
         function drawCharts() { 
             var totalVotes = {{ total_votes }};
-
             if (totalVotes === 0) {
                 document.getElementById('3dchart').innerHTML = 'No votes yet. Check back later.';
                 return; 
