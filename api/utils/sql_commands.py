@@ -32,6 +32,28 @@ def create_example_poll():
         print(f"Error creating poll, error: {e}")
 
 
+def create_example_vote():
+    try:
+        query = """
+        INSERT INTO votes(choice, p_id, ip) VALUES (%s, %s, %s)
+        """
+        data = (
+            "A",
+            1,
+            "192.168.1.0",
+        )
+        # execute query
+        cursor.execute(query, data)
+        conn_details.commit()
+
+        # close connection
+        cursor.close()
+        conn_details.close()
+        print("Successfully inserted example vote in database!")
+    except Exception as e:
+        print(f"Error adding vote, error: {e}")
+
+
 def create_tables():
     try:
         query = """
@@ -66,5 +88,6 @@ def create_tables():
         print(f"Error creating tables, error: {e}")
 
 
+create_example_vote()
 # create_tables()
 # create_example_poll()
