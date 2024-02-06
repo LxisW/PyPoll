@@ -7,69 +7,81 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #343a40; /* Dark background */
-            color: #f8f9fa; /* Light text */
+            background-color: #f4f4f4; 
+            color: #343a40; 
             padding-top: 50px;
         }
         .container {
             max-width: 600px;
+            background-color: #fff; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
         }
-        .form-control {
-            background-color: #495057;
-            color: #f8f9fa;
-        }
-        .btn-primary {
+        .btn-primary, .btn-secondary {
             background-color: #007bff;
             border-color: #007bff;
         }
+        .btn-secondary:hover, .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
         .btn-selected {
-            background-color: #007bff;
+            background-color: #0069d9; 
             color: white;
+        }
+        .btn-block {
+            margin-bottom: 10px;
+        }
+        .form-control {
+            background-color: #e9ecef;
+            color: #495057;
+        }
+        h2{
+            color: #007BFF;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2 class="text-center">Abstimmung</h2>
+        <h2 class="text-center">Vote</h2>
         <form id="pollForm" action="/submit" method="post">
             <h3>{{ poll_data.question }}</h3>
 
             <div class="row">
                 {% for key, value in poll_data.answers.items() %}
                     <div class="col-md-6 mb-3">
-                        <input type="radio" id="answer{{ key }}" name="selected_answer" value="{{ key }}" class="btn-check hidden">
-                        <label class="btn btn-secondary btn-block answer-btn" for="answer{{ key }}">{{ value }}</label>
+                        <input type="radio" id="answer{{ key }}" name="selected_answer" value="{{ key }}" class="btn-check" hidden>
+                        <label class="btn btn-outline-primary btn-block answer-btn" for="answer{{ key }}">{{ value }}</label>
                     </div>
-                    {% if loop.index is divisibleby 2 and not loop.last %}
+                    {% if loop.index % 2 == 0 and not loop.last %}
                         </div><div class="row">
                     {% endif %}
                 {% endfor %}
             </div>
 
             <input type="hidden" id="selectedAnswer" name="selected_answer">
-            <input type="hidden" id="pollId" name="poll_id", value="{{ poll_data.id }}">
+            <input type="hidden" id="pollId" name="poll_id" value="{{ poll_data.id }}">
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
         </form>
     </div>
     <script>
         document.querySelectorAll('.answer-btn').forEach(button => {
             button.addEventListener('click', function() {
-                document.querySelectorAll('.answer-btn').forEach(btn => btn.classList.remove('btn-selected'));
+                // Reset all buttons to their original style
+                document.querySelectorAll('.answer-btn').forEach(btn => {
+                    btn.classList.remove('btn-selected');
+                    btn.classList.add('btn-outline-primary');
+                });
+        
+                // Apply the 'btn-selected' style to the clicked button
                 this.classList.add('btn-selected');
-                document.getElementById('selectedAnswer').value = this.previousElementSibling.value;
+                this.classList.remove('btn-outline-primary');
+        
+                // Update the value of the hidden input to reflect the selected answer
+                document.getElementById('selectedAnswer').value = this.getAttribute('for').replace('answer', '');
             });
-        });
-    
-        document.getElementById('pollForm').addEventListener('submit', function(event) {
-            var selected = document.getElementById('selectedAnswer').value;
-            if (!selected) {
-                alert('Please select an answer.');
-                event.preventDefault();
-            } else {
-                document.querySelectorAll('.answer-btn').forEach(btn => btn.classList.remove('btn-selected'));
-                this.reset();
-            }
         });
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

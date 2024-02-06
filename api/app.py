@@ -1,13 +1,13 @@
 from flask import Flask, request, jsonify, render_template, redirect, url_for
 
 app = Flask(__name__)
-app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 app.debug = True
 app.config["env"] = "dev"
 
 
 @app.route("/", methods=["GET"])
 def main_page():
+    # start page
     return render_template("index.html")
 
 
@@ -104,7 +104,6 @@ def create_poll():
     )
     if success:
         # poll successfully created
-
         return redirect(url_for("poll_settings", poll_id=poll_id, admin_key=admin_key))
     else:
         # error creating poll

@@ -1,25 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Created poll</title>
+    <title>Created Poll</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            margin: auto;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007BFF;
+        }
+        p {
+            font-size: 16px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 2px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-<div>
-    <h1>Successfully created poll!</h1>
+<div class="container">
+    <h1>Successfully Created Poll!</h1>
     <p>Question: {{question}}</p>
-    <p>Admin key: {{admin_key}}</p>
-    <button onclick="location.href='/poll/{{poll_id}}';">Go to poll</button>
-    <button id="copyPollLinkBtn" data-poll-link="{{poll_link}}">Copy poll link</button>
-    <button onclick="location.href='/results/{{poll_id}}';">Show results</button>
-</div>  
+    <p>Admin Key: {{admin_key}}</p>
+    <button onclick="location.href='/poll/{{poll_id}}';">Go to Poll</button>
+    <button id="copyPollLinkBtn" data-poll-link="{{poll_link}}">Copy Poll Link</button>
+    <button onclick="location.href='/results/{{poll_id}}?admin_key={{admin_key}}';">Show Results</button>
+</div>
 <script>
     document.getElementById('copyPollLinkBtn').addEventListener('click', function() {
         const pollLink = this.getAttribute('data-poll-link');
-
         navigator.clipboard.writeText(pollLink).then(function() {
             console.log('Poll link copied to clipboard');
             alert('Poll link copied to clipboard!');
