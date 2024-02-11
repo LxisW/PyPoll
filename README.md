@@ -26,7 +26,7 @@
 
 ### Entwicklungsumgebung (10 Punkte)
 - **Tools**: TODO
-- **Visual Studio Code with Theme and Extension**: ![Visual Studio Code](https://github.com/LxisW/PyPoll/images/vsc.png)
+- **Visual Studio Code with Theme and Extension**: ![Visual Studio Code](https://github.com/LxisW/PyPoll/blob/main/images/vsc.pngg)
 
 
 
