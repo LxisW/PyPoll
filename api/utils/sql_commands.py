@@ -88,6 +88,6 @@ def create_tables():
         print(f"Error creating tables, error: {e}")
 
 
-create_example_vote()
+# create_example_vote()
 # create_tables()
-# create_example_poll()
+create_example_poll()
