@@ -1,5 +1,5 @@
 
-# Eigenbewertung: Abstimmungsapp Projekt
+# Bewertung: Abstimmungsapp Projekt
 
 ## FACHKOMPETENZ (40 Punkte)
 
@@ -14,7 +14,7 @@
 - **Strukturierte Datentypen**: Einsatz von Listen und Dictionaries in Methoden wie `get_votes`, um die Stimmen zu zählen und Daten zu organisieren.
 
 ### Syntax und Semantik von Python (10 Punkte)
-- **Stolz**: Der `DatabaseHelper` ist ein gutes Beispiel für klaren, modularen Code, der die Syntax und Semantik von Python gut nutzt. Insbesondere die Methode `create_poll` zeigt, wie effektiv mit Daten umgegangen und Interaktionen mit der Datenbank durchgeführt werden können.
+- Der `DatabaseHelper` ist ein gutes Beispiel für klaren, modularen Code, der die Syntax und Semantik von Python gut nutzt. Insbesondere die Methode `create_poll` zeigt, wie effektiv mit Daten umgegangen und Interaktionen mit der Datenbank durchgeführt werden können.
 
 ### Entwurf, Programmierung und Test eines größeren Programms (10 Punkte)
 - **Teamarbeit**: Da das Projekt alleine durchgeführt wurde, zeigt dies die Fähigkeit, ein größeres System selbständig zu entwerfen, zu implementieren und auf Funktionsfähigkeit zu testen. Die Komplexität und der Umfang des Codes belegen dies.
@@ -26,8 +26,25 @@
 
 ### Entwicklungsumgebung (10 Punkte)
 - **Tools**: TODO
+- **Visual Studio Code with Theme and Extension**: ![Visual Studio Code](https://github.com/LxisW/PyPoll/images/vsc.png)
+
+
+
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
+
+# Die Studierenden können ihre Software erläutern und begründen. (5)
+<!-- Jeder in der Gruppe: You have helped someone else and taught something to a fellow student (get a support message from one person) -->
+TODO
+
+# Sie können existierenden Code analysieren und beurteilen. (5)
+<!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
+TODO
+
+# Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
+<!-- Which technology did you learn outside of the teacher given input -->
+<!-- Did you or your group get help from someone in the classroom (get a support message here from the person who helped you) -->
+TODO
 
 Da ich das Projekt alleine gemacht habe, habe ich bei der Entwicklung meiner Abstimmungsapp die Möglichkeit genutzt, meine Fähigkeiten im selbstständigen Lernen und in der Problemlösung zu vertiefen. Die Herausforderung, das Projekt allein zu bewältigen, motivierte mich, neue Technologien und Konzepte zu erforschen.
 
@@ -38,5 +55,7 @@ Online-Tutorials auf Youtube erweiterten mein Verständnis für das Datenbankdes
 Die selbständige Realisierung dieses Projekts hat mir nicht nur technische Kenntnisse vermittelt, sondern auch gezeigt, wie wertvoll Eigeninitiative und das Streben nach Wissen in der Softwareentwicklung sind. Diese Erfahrung stärkt mein Vertrauen in meine Fähigkeit, mich neuen Herausforderungen zu stellen und zukünftige Projekte erfolgreich zu meistern.
 
 ## ÜBERGREIFENDE HANDLUNGSKOMPETENZ (30 Punkte)
+<!-- Which parts of your project are you proud of and why (describe, analyse, link) -->
+<!-- Where were the problems with your implementation, timeline, functionality, team management (describe, analyse, reflect from past to future, link if relevant) -->
 
 TODO
