@@ -3,8 +3,5 @@ class Helper:
         pass
 
     @staticmethod
-    def check_answers(answer_A, answer_B, answer_C, answer_D):
-        success = False
-        if answer_A != "" and answer_B != "" and answer_C != "" and answer_D != "":
-            success = True
-        return success
+    def check_answers(answers):
+        return all(answers[option] != "" for option in ["A", "B", "C", "D"])

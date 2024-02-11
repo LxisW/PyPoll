@@ -100,38 +100,33 @@ class DatabaseHelper:
     def create_poll(
         self,
         question,
-        answer_A,
-        answer_B,
-        answer_C,
-        answer_D,
+        answers,
         ip,
         one_per_ip,
     ):
-        # default values
-        id = -1
+        # Default return values
+        poll_id = -1
         success = False
         admin_key = str(uuid.uuid4())
-        conn = self.get_connection()
-        print(one_per_ip)
-        if one_per_ip == "on":
-            one_per_ip = True
-        else:
-            one_per_ip = False
 
-        valid = Helper.check_answers(
-            answer_A=answer_A, answer_B=answer_B, answer_C=answer_C, answer_D=answer_D
-        )
+        # start connection with database
+        conn = self.get_connection()
+
+        # Convert one_per_ip to boolean
+        one_per_ip = True if one_per_ip == "on" else False
+
+        valid = Helper.check_answers(answers=answers)
         try:
             if valid:
-                answers = json.dumps(
-                    {"A": answer_A, "B": answer_B, "C": answer_C, "D": answer_D}
-                )
+                # Prepare and execute the SQL query
+                answers_json = json.dumps(answers)
                 cursor = conn.cursor()
                 cursor.execute(
                     "INSERT INTO polls(question, answers, ip, one_per_ip, admin_key) VALUES (%s, %s, %s, %s, %s) RETURNING p_id;",
-                    (question, answers, ip, one_per_ip, admin_key),
+                    (question, answers_json, ip, one_per_ip, admin_key),
                 )
-                id = cursor.fetchone()[0]
+                # Fetch the generated poll ID
+                poll_id = cursor.fetchone()[0]
                 conn.commit()
                 success = True
 
@@ -141,7 +136,7 @@ class DatabaseHelper:
             print(f"Error creating poll: {e}")
         finally:
             self.put_connection(conn)
-        return (success, id, admin_key)
+        return (success, poll_id, admin_key)
 
     def check_admin_key(self, poll_id, admin_key):
         try:

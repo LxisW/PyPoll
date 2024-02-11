@@ -92,10 +92,7 @@ def create_poll():
 
     success, poll_id, admin_key = app.db_helper.create_poll(
         question=question,
-        answer_A=answer_A,
-        answer_B=answer_B,
-        answer_C=answer_C,
-        answer_D=answer_D,
+        answers={"A": answer_A, "B": answer_B, "C": answer_C, "D": answer_D},
         ip=ip,
         one_per_ip=one_per_ip,
     )
