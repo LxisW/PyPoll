@@ -26,7 +26,9 @@
 
 ### Entwicklungsumgebung (10 Punkte)
 - **Tools**: TODO
-- **Visual Studio Code with Theme and Extension**: ![Visual Studio Code](https://github.com/LxisW/PyPoll/blob/main/images/vsc.png)
+- **Visual Studio Code with Theme and Extensions**: ![Visual Studio Code](https://github.com/LxisW/PyPoll/blob/main/images/vsc.png)
+- **Git**: TODO
+- **ChatGPT**: ![ChatGPT](https://github.com/LxisW/PyPoll/blob/main/images/chatgpt.png) Benutzung von ChatGPT zur Verberssung und Strukutrierung des selbstgeschriebenen Codes
 
 
 

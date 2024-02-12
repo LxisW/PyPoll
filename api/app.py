@@ -14,10 +14,12 @@ def main_page():
 @app.route("/poll/<poll_id>", methods=["GET"])
 def poll_page(poll_id):
     ip = request.remote_addr
+    # get poll data
     poll_data = app.db_helper.get_poll_data(poll_id)
     if poll_data != None:
-        has_voted = app.db_helper.has_voted(ip=ip, poll_id=poll_id)
         if poll_data["one_per_ip"]:
+            has_voted = app.db_helper.has_voted(ip=ip, poll_id=poll_id)
+            # check if user has voted
             if not has_voted:
                 return render_template("poll.html", poll_data=poll_data)
             else:
@@ -25,7 +27,7 @@ def poll_page(poll_id):
                 return redirect(url_for("result_endpoint", poll_id=poll_id))
 
         else:
-            # mulitple votes per IP allowed
+            # multiple votes per IP allowed
             return render_template("poll.html", poll_data=poll_data)
 
     else:
