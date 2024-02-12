@@ -25,10 +25,9 @@
 ## METHODENKOMPETENZ (10 Punkte)
 
 ### Entwicklungsumgebung (10 Punkte)
-- **Tools**: TODO
 - **Visual Studio Code with Theme and Extensions**: ![Visual Studio Code](https://github.com/LxisW/PyPoll/blob/main/images/vsc.png)
-- **Git**: TODO
-- **ChatGPT**: ![ChatGPT](https://github.com/LxisW/PyPoll/blob/main/images/chatgpt.png) Benutzung von ChatGPT zur Verberssung und Strukutrierung des selbstgeschriebenen Codes
+- **Git**: Einsatz von Git für Versionskontrolle und Fehlermanagemen ![GIT](https://github.com/LxisW/PyPoll/blob/main/images/git.png) 
+- **ChatGPT**: enutzung von ChatGPT zur Verberssung und Strukutrierung des selbstgeschriebenen Codes ![ChatGPT](https://github.com/LxisW/PyPoll/blob/main/images/chatgpt.png) B
 
 
 
