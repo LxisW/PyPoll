@@ -27,7 +27,7 @@
 ### Entwicklungsumgebung (10 Punkte)
 - **Visual Studio Code with Theme and Extensions**: ![Visual Studio Code](https://github.com/LxisW/PyPoll/blob/main/images/vsc.png)
 - **Git**: Einsatz von Git für Versionskontrolle und Fehlermanagemen ![GIT](https://github.com/LxisW/PyPoll/blob/main/images/git.png) 
-- **ChatGPT**: enutzung von ChatGPT zur Verberssung und Strukutrierung des selbstgeschriebenen Codes ![ChatGPT](https://github.com/LxisW/PyPoll/blob/main/images/chatgpt.png) B
+- **ChatGPT**: Benutzung von ChatGPT zur Verberssung und Strukutrierung des selbstgeschriebenen Codes ![ChatGPT](https://github.com/LxisW/PyPoll/blob/main/images/chatgpt.png)
 
 
 
@@ -36,7 +36,7 @@
 
 # Die Studierenden können ihre Software erläutern und begründen. (5)
 <!-- Jeder in der Gruppe: You have helped someone else and taught something to a fellow student (get a support message from one person) -->
-TODO
+Da ich das Projekt alleine gemacht habe, konnte ich niemandem aus der Gruppe helfen.
 
 # Sie können existierenden Code analysieren und beurteilen. (5)
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
@@ -58,5 +58,20 @@ Die selbständige Realisierung dieses Projekts hat mir nicht nur technische Kenn
 ## ÜBERGREIFENDE HANDLUNGSKOMPETENZ (30 Punkte)
 <!-- Which parts of your project are you proud of and why (describe, analyse, link) -->
 <!-- Where were the problems with your implementation, timeline, functionality, team management (describe, analyse, reflect from past to future, link if relevant) -->
+Stolz:
 
-TODO
+Selbstständige Projektumsetzung: Ich habe das Projekt von der Idee bis zur Realisierung alleine umgesetzt. Dieser Prozess hat mir gezeigt, dass ich auch komplexe Probleme, wie zum Beispiel eine Datenbankverbindung mit Flask, eigenständig lösen kann.
+
+Flexibilität bei der Code-Entwicklung: Besonders erwähnenswert finde ich die Anpassung des Codes für die Integration neuer Funktionen, wie z.B. die Entscheidung über mehrfache Stimmen pro IP oder der Admin-Key. Dies erforderte bedeutsame Änderungen am bestehenden Code, was mir eine flexible und problemlösungsorientierte Arbeitsweise abverlangte.
+
+Herausforderungen:
+
+Ursprüngliche Projektplanung: Anfangs war mir unklar, welchen Umfang ich in der vorgegebenen Zeit bewältigen konnte. Dies führte zu mehrfachen Anpassungen des Projektplans für die Integration neuer Features. Die Erfahrung lehrte mich, zukünftige Projekte mit einem breiteren Planungsrahmen zu beginnen.
+
+Anpassungen am bestehenden Code: Die Implementierung zusätzlicher Funktionen, insbesondere des IP-Filters, zeigte die Wichtigkeit einer gut vorbereiteten und strukturierten Codebasis.
+
+Lektionen und zukünftige Strategien:
+
+Wichtigkeit von skalierbarem Code: Die Arbeit hat die Notwendigkeit unterstrichen, Code von Beginn an flexibel und skalierbar zu gestalten, um zukünftige Erweiterungen einfacher zu integrieren.
+
+Umfassendere Projektplanung: Die Erfahrungen haben die Bedeutung einer gründlichen Anfangsplanung hervorgehoben, um den Projektumfang realistisch einzuschätzen und Anpassungen zu vereinfachen.
