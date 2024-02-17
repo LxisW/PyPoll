@@ -26,7 +26,7 @@
 
 ### Entwicklungsumgebung (10 Punkte)
 - **Visual Studio Code with Theme and Extensions**: ![Visual Studio Code](https://github.com/LxisW/PyPoll/blob/main/images/vsc.png)
-- **Git**: Einsatz von Git für Versionskontrolle und Fehlermanagemen ![GIT](https://github.com/LxisW/PyPoll/blob/main/images/git.png) 
+- **Git**: Einsatz von Git für Versionskontrolle und Fehlermanagement ![GIT](https://github.com/LxisW/PyPoll/blob/main/images/git.png) 
 - **ChatGPT**: Benutzung von ChatGPT zur Verberssung und Strukutrierung des selbstgeschriebenen Codes ![ChatGPT](https://github.com/LxisW/PyPoll/blob/main/images/chatgpt.png)
 
 
