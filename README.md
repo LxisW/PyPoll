@@ -44,8 +44,6 @@ Die Bewertung des anderen Projektes, in meinem Fall TimeTheFreeze kann man [hier
 # Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
 <!-- Which technology did you learn outside of the teacher given input -->
 <!-- Did you or your group get help from someone in the classroom (get a support message here from the person who helped you) -->
-TODO
-
 Da ich das Projekt alleine gemacht habe, habe ich bei der Entwicklung meiner Abstimmungsapp die Möglichkeit genutzt, meine Fähigkeiten im selbstständigen Lernen und in der Problemlösung zu vertiefen. Die Herausforderung, das Projekt allein zu bewältigen, motivierte mich, neue Technologien und Konzepte zu erforschen.
 
 Wesentlich für meinen Fortschritt waren die offiziellen Dokumentationen von Flask und PostgreSQL. Diese haben mir das nötige Fundament geboten, um die Anwendung zu strukturieren und effizient mit Daten zu arbeiten. Bei spezifischeren Herausforderungen half mir die Community auf Stack Overflow, praktische Lösungen und bewährte Methoden zu entdecken, die meine Entwicklungserfahrung bereicherten.
