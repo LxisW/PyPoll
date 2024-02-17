@@ -31,7 +31,6 @@
 
 
 
-
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
 
 # Die Studierenden können ihre Software erläutern und begründen. (5)
@@ -40,7 +39,7 @@ Da ich das Projekt alleine gemacht habe, konnte ich niemandem aus der Gruppe hel
 
 # Sie können existierenden Code analysieren und beurteilen. (5)
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
-TODO
+Die Bewertung des anderen Projektes, in meinem Fall TimeTheFreeze kann man [hier](https://github.com/LxisW/PyPoll/blob/main/grading_time_the_freeze.md) finden.
 
 # Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
 <!-- Which technology did you learn outside of the teacher given input -->
@@ -51,15 +50,13 @@ Da ich das Projekt alleine gemacht habe, habe ich bei der Entwicklung meiner Abs
 
 Wesentlich für meinen Fortschritt waren die offiziellen Dokumentationen von Flask und PostgreSQL. Diese haben mir das nötige Fundament geboten, um die Anwendung zu strukturieren und effizient mit Daten zu arbeiten. Bei spezifischeren Herausforderungen half mir die Community auf Stack Overflow, praktische Lösungen und bewährte Methoden zu entdecken, die meine Entwicklungserfahrung bereicherten.
 
-Online-Tutorials auf Youtube erweiterten mein Verständnis für das Datenbankdesign und die Benutzerinteraktion. Diese Tutorial ermöglichten es mir, neue Programmierstile von anderen zu sehen und an Ding zu denken, an die man zuvor noch nicht gedacht hatte.
+Online-Tutorials auf Youtube erweiterten mein Verständnis für das Datenbankdesign und die Benutzerinteraktion. Diese Tutorial ermöglichten es mir, neue Programmierstile von anderen zu sehen und an Dinge zu denken, an die ich zuvor noch nicht gedacht hatte.
 
 Die selbständige Realisierung dieses Projekts hat mir nicht nur technische Kenntnisse vermittelt, sondern auch gezeigt, wie wertvoll Eigeninitiative und das Streben nach Wissen in der Softwareentwicklung sind. Diese Erfahrung stärkt mein Vertrauen in meine Fähigkeit, mich neuen Herausforderungen zu stellen und zukünftige Projekte erfolgreich zu meistern.
 
 ## ÜBERGREIFENDE HANDLUNGSKOMPETENZ (30 Punkte)
 <!-- Which parts of your project are you proud of and why (describe, analyse, link) -->
 <!-- Where were the problems with your implementation, timeline, functionality, team management (describe, analyse, reflect from past to future, link if relevant) -->
-Stolz:
-
 Selbstständige Projektumsetzung: Ich habe das Projekt von der Idee bis zur Realisierung alleine umgesetzt. Dieser Prozess hat mir gezeigt, dass ich auch komplexe Probleme, wie zum Beispiel eine Datenbankverbindung mit Flask, eigenständig lösen kann.
 
 Flexibilität bei der Code-Entwicklung: Besonders erwähnenswert finde ich die Anpassung des Codes für die Integration neuer Funktionen, wie z.B. die Entscheidung über mehrfache Stimmen pro IP oder der Admin-Key. Dies erforderte bedeutsame Änderungen am bestehenden Code, was mir eine flexible und problemlösungsorientierte Arbeitsweise abverlangte.
